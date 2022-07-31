@@ -1,0 +1,477 @@
+/* ==================== 
+VARIAVEIS
+===================== */
+:root {
+  --primaryColor: #f15025;
+  --mainBlack: #222;
+  --mainWhite: #fff;
+  --darkGrey: #afafaf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.2rem;
+}
+/* ==================== 
+VARIAVEIS
+===================== */
+
+/* ==================== 
+GLOBAL STYLES
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--mainBlack);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: 300;
+  font-size: 0.7rem;
+  line-height: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border: 3px solid var(--primaryColor);
+  color: var(--primaryColor);
+  margin: 3rem;
+  transition: var(--mainTransition);
+}
+
+.btn:hover {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+/* ==================== 
+GLOBAL STYLES
+===================== */
+
+/* ==================== 
+MAIN NAVBAR
+===================== */
+
+.navbar-main {
+  background: var(--darkGrey);
+  padding: 0 2rem;
+}
+
+.navbar-main li {
+  list-style: none;
+}
+
+.navbar-main a {
+  color: var(--primaryColor);
+  display: block;
+  padding: 1rem 0;
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+}
+
+.navbar-main a:hover {
+  color: var(--mainBlack);
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-main ul {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .navbar-main a {
+    text-align: center;
+  }
+}
+
+/* ==================== 
+END OF MAIN NAVBAR
+===================== */
+
+/* ==================== 
+HERO
+===================== */
+.hero-container {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  min-height: calc(100vh - 4.25rem);
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(./cssgrid-img.jpg) center/cover fixed no-repeat;
+}
+.hero-title {
+  align-self: flex-end;
+  justify-self: center;
+  color: var(--mainWhite);
+  text-shadow: 2px 2px 2px var(--mainBlack);
+  text-align: center;
+}
+
+.hero-txt {
+  align-self: flex-start;
+  justify-self: center;
+  max-width: 800px;
+  text-align: center;
+  color: var(--mainWhite);
+  text-shadow: 2px 2px 2px var(--mainBlack);
+}
+
+@media screen and (max-width: 600px) {
+  .hero-container {
+    min-height: 100vh;
+    background: var(--primaryColor);
+  }
+  .hero-title {
+    padding: 0 2rem;
+  }
+}
+.hero-txt {
+  padding: 0 2rem;
+}
+
+/* ==================== 
+END OF HERO
+===================== */
+
+/* ==================== 
+CARDS
+===================== */
+.container-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.main-cards {
+  width: 80%;
+  box-shadow: 3px 3px 8px var(--mainBlack);
+  background: rgb(236, 234, 234);
+  margin-top: 2rem;
+  max-width: 430px;
+}
+
+.cards-img img {
+  object-fit: cover;
+  height: 230px;
+}
+
+.cards-txt {
+  margin: 0 1rem;
+}
+
+.cards-txt h2 {
+  margin-top: 0.65rem;
+}
+
+.cards-txt p {
+  font-size: 0.8rem;
+  margin-bottom: 0.7rem;
+}
+
+.cards-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0.7rem 0;
+  align-items: center;
+  background: var(--darkGrey);
+  color: var(--primaryColor);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35);
+}
+.cards-icons i {
+  justify-self: center;
+  align-self: center;
+}
+
+@media screen and (max-width: 1390px) {
+  .container-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-cards {
+    width: 80%;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .container-cards {
+    grid-template-columns: 1fr;
+  }
+  .main-cards {
+    width: 80%;
+    gap: 1rem;
+  }
+}
+
+/* ==================== 
+END OF CARDS
+===================== */
+
+/* ==================== 
+TILES
+===================== */
+
+.tiles h1 {
+  text-align: center;
+  transform: translateY(100px);
+}
+
+.container-tiles {
+  display: grid;
+  gap: 2rem auto;
+  max-width: 1170px;
+  width: 90vw;
+  margin: 7rem auto;
+  gap: 2rem 1rem;
+}
+.container-tiles img {
+  object-fit: cover;
+}
+
+@media screen and (min-width: 580px) {
+  .container-tiles {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem 1rem;
+    margin: 7rem auto;
+  }
+
+  .container-tiles img {
+    object-fit: cover;
+    height: 25vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-tiles {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem 1rem;
+    margin: 7rem auto;
+  }
+
+  .container-tiles img {
+    object-fit: cover;
+    height: 25vh;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .container-tiles {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 200px);
+    gap: 1rem;
+    grid-template-areas:
+      "a a a b"
+      "a a a c"
+      "d d d d"
+      "e f f f"
+      "e g h i";
+    transform: scaleY(0.7);
+    margin: auto;
+  }
+
+  .container-tiles img {
+    height: 100%;
+  }
+  .tiles-img-1 {
+    grid-area: a;
+  }
+
+  .tiles-img-2 {
+    grid-area: b;
+  }
+
+  .tiles-img-3 {
+    grid-area: c;
+  }
+
+  .tiles-img-4 {
+    grid-area: d;
+  }
+
+  .tiles-img-5 {
+    grid-area: e;
+  }
+
+  .tiles-img-6 {
+    grid-area: f;
+  }
+
+  .tiles-img-7 {
+    grid-area: g;
+  }
+
+  .tiles-img-8 {
+    grid-area: h;
+  }
+
+  .tiles-img-9 {
+    grid-area: i;
+  }
+}
+
+/* ==================== 
+END OF TILES
+===================== */
+
+/* ==================== 
+LAYOUT
+===================== */
+.txt-layout {
+  background: red;
+  color: var(--mainWhite);
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+/* layout navbar */
+
+.navbar-layout {
+  background: var(--darkGrey);
+  padding: 0 2rem;
+}
+
+.navbar-layout li {
+  list-style: none;
+}
+
+.navbar-layout a {
+  color: var(--mainBlack);
+  display: block;
+  padding: 0.5rem 0;
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+}
+
+.navbar-layout a:hover {
+  color: var(--primaryColor);
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-layout ul {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .layout-container {
+    grid-template-areas: "a a a" "b c d" "f f f";
+  }
+  .txt-layout {
+    grid-area: a;
+  }
+  .navbar-layout ul {
+    grid-area: b;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100%;
+    align-items: center;
+  }
+  .p-layout {
+    grid-area: c;
+    height: 91vh;
+    width: 80%;
+    justify-self: center;
+  }
+  .teste .icons-layout {
+    grid-area: d;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 50px;
+    align-items: center;
+    height: 100vh;
+    width: 50px;
+    background: var(--darkGrey);
+    color: var(--mainBlack);
+  }
+
+  .footer {
+    grid-area: f;
+    height: 50px;
+  }
+}
+
+/* end of layout navbar */
+.layout-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto auto;
+}
+/* .layout-container {
+  max-height: 100vh;
+} */
+
+.p-layout {
+  background: var(--mainWhite);
+  /* height: 50%; */
+}
+.p-layout p {
+  font-size: 1.13rem;
+  margin: 3rem 2rem;
+  letter-spacing: var(--mainSpacing);
+}
+
+.icons-layout {
+  background: var(--primaryColor);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: var(--mainWhite);
+  width: 100%;
+}
+
+.icons-layout i {
+  cursor: pointer;
+}
+
+.footer {
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+  padding: 1.05rem 0;
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+/* ==================== 
+END OF LAYOUT
+===================== */
